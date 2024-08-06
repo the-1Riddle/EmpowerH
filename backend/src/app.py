@@ -220,7 +220,7 @@ def delete_blog(blog_id: int, db: Session = Depends(get_db)):
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="blog not found"
         )
-    return crud.delete_blog(db=db, blog_id=post_id)
+    return crud.delete_blog(db=db, blog_id=blog_id)
 
 
 # Comment Routes

@@ -34,6 +34,24 @@ export default {
   deletePost(postId) {
     return apiClient.delete(`/posts/${postId}`);
   },
+  getBlogsByLikes() {
+    return apiClient.get('/blogs/likes');
+  },
+  getBlogsByComments() {
+    return apiClient.get('/blogs/comments');
+  },
+  getBlogs() {
+    return apiClient.get('/blogs/');
+  },
+  getBlogById(blogId) {
+    return apiClient.get(`/blogs/${blogId}`);
+  },
+  createBlog(blogData, config) {
+    return apiClient.post('/blogs/', blogData, config);
+  },
+  deleteBlog(blogId) {
+    return apiClient.delete(`/blogs/${blogId}`);
+  },
   getUsers() {
     return apiClient.get('/users/');
   },
@@ -55,6 +73,9 @@ export default {
   getComments(postId) {
     return apiClient.get(`/comments?post_id=${postId}`);
   },
+  getCommentsByLikes() {
+    return apiClient.get('/comments/likes');
+  },
   createComment(commentData) {
     const { user_email, ...data } = commentData;
     return apiClient.post(`/comments/?user_email=${encodeURIComponent(user_email)}`, data);
@@ -62,24 +83,23 @@ export default {
   deleteComment(commentId) {
     return apiClient.delete(`/comments/${commentId}`);
   },
-  loginUser(loginData) {
+  async loginUser(loginData) {
     const params = new URLSearchParams();
     params.append('username', loginData.username);
     params.append('password', loginData.password);
-    return apiClient.post('/token', params, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-    .then(response => {
+    try {
+      const response = await apiClient.post('/token', params, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
       // Store the access token in localStorage
       localStorage.setItem('access_token', response.data.access_token);
       return response;
-    })
-    .catch(error => {
+    } catch (error) {
       console.error("Login API call failed", error);
       throw error;
-    });
+    }
   },
   getUserDetails() {
     return apiClient.get('/users/me/')
