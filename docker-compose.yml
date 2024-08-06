@@ -27,3 +27,34 @@ services:
 
 networks:
   app-network:
+
+# version: '3.8'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8000:8000"
+#     environment:
+#       - DATABASE_URL=sqlite:///app/db/database.db
+#     volumes:
+#       - db-data:/app/db  # Mount a volume for persistent storage
+#     networks:
+#       - app-network
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: Dockerfile
+#     ports:
+#       - "80:80"
+#     networks:
+#       - app-network
+
+# networks:
+#   app-network:
+
+# volumes:
+#   db-data:
