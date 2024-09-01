@@ -1,10 +1,10 @@
 <template>
-	<div class="container">
+	<div class="container section">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="leftbar">
 					<div class="user-details">
-						<img src="../../assets/img/user-image.svg" class="img-fluid rounded-circle" alt="Profile Image">
+						<img src="../assets/logo.svg" class="img-fluid rounded-circle" alt="Profile Image">
 						<h4>{{ firstName }} {{ lastName }}</h4>
 						<p>{{ userEmail }}</p>
 					</div>
@@ -12,7 +12,6 @@
 						<ul>
 							<li><a href="#">My Posts</a></li>
 							<li><a href="#">Notifications</a></li>
-							<li><a href="#">My Messages</a></li>
 							<li><a href="#">Settings</a></li>
 						</ul>
 					</div>
@@ -20,7 +19,10 @@
 			</div>
 			<div class="col-md-9">
 				<div class="main-section">
-					<h2>User Account</h2>
+					<h2>Edit Profile</h2>
+					<p>Keep your personal details private
+						. Information you add here is visible to anyone who can view your profile.
+					</p>
 					<div class="change-password">
 						<h3>Change Password</h3>
 						<form @submit.prevent="changePassword">
@@ -35,11 +37,6 @@
 							</div>
 							<button id="change-password-btn" class="btn btn-primary">Change Password</button>
 						</form>
-					</div>
-					<div class="customize-image">
-						<h3>Customize Profile Image</h3>
-						<input type="file" id="profile-image-upload" class="form-control-file">
-						<button id="upload-image-btn" class="btn btn-primary">Upload Image</button>
 					</div>
 				</div>
 			</div>
