@@ -5,17 +5,16 @@
 </script>
 
 <template>
-  <header>
+  <!--header>
     <Header msg="You did it!" />
-  </header>
+  </header-->
 
-  <body>
-    <RouterView />
-  </body>
+  <!-- the body content -->
+  <RouterView />
 
-  <footer>
+  <!--footer>
     <Footer msg="You did it!" />
-  </footer>
+  </footer-->
 </template>
 
 
