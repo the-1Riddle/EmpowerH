@@ -1,12 +1,3 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
   <header class="l-header" id="header">
     <nav class="nav bd-container">
@@ -20,7 +11,7 @@ defineProps({
                 <h4>PAGES</h4>
                 <a href="/About">About Us</a>
                 <a href="/Contact">Contact Us</a>
-                <a href="/PrivacyPolicy">Privacy Policy</a>
+                <a href="/Privacy-Policy">Privacy Policy</a>
                 <a href="/terms-and-conditions">Terms & Conditions</a>
               </div>
             </div>

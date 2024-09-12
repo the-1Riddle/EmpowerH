@@ -1,5 +1,4 @@
 <template>
-
 	<main class="l-main">
 		<!------------ HOME ------------>
 		<section class="services section bd-container" id="services">
@@ -213,6 +212,7 @@
 
 <script>
 import api from '../api';
+import Header from '@/components/Header.vue';
 
 export default {
   data() {
