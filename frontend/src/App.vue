@@ -12,9 +12,9 @@
   <!-- the body content -->
   <RouterView />
 
-  <!--footer>
+  <footer>
     <Footer msg="You did it!" />
-  </footer-->
+  </footer>
 </template>
 
 
