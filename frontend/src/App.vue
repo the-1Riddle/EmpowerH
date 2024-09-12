@@ -5,9 +5,9 @@
 </script>
 
 <template>
-  <!--header>
+  <header>
     <Header msg="You did it!" />
-  </header-->
+  </header>
 
   <!-- the body content -->
   <RouterView />
