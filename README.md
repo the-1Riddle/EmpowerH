@@ -85,7 +85,7 @@ Chat Platform: Facilitates real-time communication between users through a secur
 This project was made possible by the contributions of:
 
 <a href="https://github.com/the-1Riddle/EmpowerHer/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=the-1Riddle/EmpowerHer" />
+  <img src="https://contrib.rocks/image?repo=the-1Riddle/EmpowerH" />
   
 </a>
 
